@@ -1,116 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kailash Khanal | Sr. System Officer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailash Khanal | Infrastructure & Cloud Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: { 850: '#151e2e', 950: '#020617' },
+                        primary: '#38bdf8', // Sky Blue
+                        secondary: '#818cf8', // Indigo
+                        accent: '#10b981',  // Emerald
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f1f5f9; }
+        .glass-panel { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .nav-glass { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .service-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        /* Terminal Cursor */
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
+<body class="selection:bg-primary selection:text-slate-950">
+
+    <nav class="fixed w-full z-50 nav-glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight hover:text-primary transition group">
+                KAILASH<span class="text-primary group-hover:text-white transition">.KHANAL</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="text-primary border border-primary/20 px-5 py-2 rounded-full hover:bg-primary hover:text-slate-900 transition font-bold">Hire Me</a>
+            </div>
+            
+            <button class="md:hidden text-2xl text-slate-300"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </nav>
-    <section id="home" class="hero">
-      <div class="container">
-        <h1>Kailash Khanal</h1>
-        <p class="role animated-text">System Administrator | DevOps Enthusiast | Freelancer</p>
-        <p class="location">New Baneshwor, Kathmandu, Nepal</p>
-        <a href="https://linkedin.com/in/kailashkhanal" target="_blank" class="btn">💼 Connect on LinkedIn</a>
-      </div>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 pt-20 max-w-7xl mx-auto relative overflow-hidden">
+        <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[128px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="z-10 mt-10 md:mt-0">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span class="text-emerald-400 font-mono text-xs tracking-widest uppercase font-bold">Senior System Officer</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 tracking-tight">
+                 Bridging Systems <br>
+                <span class="gradient-text">Into The Cloud.</span>
+            </h1>
+
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                I am a <strong>Senior System Officer</strong> and <strong>Cloud Engineer</strong>.
+                I specialize in modernizing infrastructure, automating workflows (DevOps), and building robust web solutions for businesses.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="#experience" class="bg-primary hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-lg font-bold transition flex items-center gap-2 shadow-lg shadow-primary/20">
+                    View My Journey <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="#projects" class="glass-panel hover:bg-white/5 px-8 py-4 rounded-lg font-bold transition text-slate-200">
+                    Freelance Projects
+                </a>
+            </div>
+
+            <div class="mt-20 pt-8 border-t border-slate-800/60 flex flex-wrap gap-10 opacity-50 grayscale hover:grayscale-0 transition duration-500 items-center justify-start">
+                <i class="fa-brands fa-aws text-4xl hover:scale-110 transition" title="AWS"></i>
+                <i class="fa-brands fa-docker text-4xl hover:scale-110 transition" title="Docker"></i>
+                <i class="fa-brands fa-linux text-4xl hover:scale-110 transition" title="Linux"></i>
+                <i class="fa-brands fa-windows text-4xl hover:scale-110 transition" title="Windows Server"></i>
+                <i class="fa-brands fa-python text-4xl hover:scale-110 transition" title="Python"></i>
+            </div>
+        </div>
     </section>
-  </header>
 
-  <section id="about" class="about">
-    <h2>🧠 About Me</h2>
-    <p>I am a passionate System Administrator and DevOps enthusiast with hands-on expertise in Linux, Windows servers, Docker, VMware, firewalls, and automation tools. I thrive in solving complex infrastructure challenges and continuously research emerging technologies to improve IT systems. Additionally, I actively freelance in system administration and web development projects, including WordPress-based solutions.</p>
-  </section>
+    <section id="about" class="py-24 px-6 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-lg">
+                        I am a passionate <strong>System Administrator</strong> and <strong>DevOps enthusiast</strong> with hands-on expertise in Linux, Windows servers, Docker, VMware, and Firewalls.
+                    </p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        Currently, I manage enterprise infrastructure at <strong>QFX Cinemas</strong> while actively researching emerging cloud technologies. I also freelance, helping businesses build their digital presence through custom websites and e-commerce platforms.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-shield-halved mr-2"></i>System Hardening</span>
+                        <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-server mr-2"></i>Disaster Recovery</span>
+                        <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-infinity mr-2"></i>CI/CD Pipelines</span>
+                        <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-code mr-2"></i>Web Development</span>
+                    </div>
+                </div>
 
-  <section id="experience" class="experience">
-    <h2>💼 Work Experience</h2>
-    <div class="card">
-      <h3>Senior System Officer – QFX Cinemas</h3>
-      <span>May 2024 – Present</span>
-      <ul>
-        <li>Manage enterprise-level IT infrastructure, including virtualization, firewalls, backup systems, and monitoring tools.</li>
-        <li>Implement DevOps practices to enhance operational efficiency and collaboration between teams.</li>
-        <li>Oversee system optimization, security audits, and ensure robust disaster recovery planning.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>IT Officer – QFX Cinemas</h3>
-      <span>May 2023 – Apr 2024</span>
-      <ul>
-        <li>Managed server environments, firewalls, and backup systems to ensure optimal performance.</li>
-        <li>Automated system tasks using Python and integrated monitoring solutions for improved infrastructure visibility.</li>
-        <li>Handled disaster recovery planning and system hardening procedures for enhanced security.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>WordPress Developer – The Web Art</h3>
-      <span>Oct 2022 – Mar 2023</span>
-      <ul>
-        <li>Developed custom WordPress sites with WooCommerce integrations.</li>
-        <li>Managed server setups, migrations, and optimized environments for performance and stability.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>System Admin – CSE Multi Trade Center</h3>
-      <span>Feb 2020 – Jun 2022</span>
-      <ul>
-        <li>Provided full-stack support for clients, including server and network administration.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Computer Trainer – CSE Multi Trade Center</h3>
-      <span>Feb 2020 – Jun 2022</span>
-      <ul>
-        <li>Delivered technical training on networking, server management, and security protocols.</li>
-      </ul>
-    </div>
-  </section>
-  
-  <section id="projects" class="projects">
-    <h2>💡 Projects</h2>
-  
-    <div class="card">
-      <h3>Project 1: E-commerce Website</h3>
-      <p>Developed a fully functional e-commerce platform with secure payment integration, inventory management, and responsive UI using PHP, MySQL, and Bootstrap.</p>
-    </div>
-  
-    <div class="card">
-      <h3>Project 2: Marketing Tools Automation</h3>
-      <p>Built automation tools for digital marketing workflows.</p>
-    </div>
-  
-    <div class="card">
-      <h3>Project 3: HR & Career Portal</h3>
-      <p>Created an internal HR portal for job posting, resume screening, and applicant tracking, along with a public career site for candidates to submit CVs and apply online.</p>
-    </div>
-  
-    <div class="card">
-      <h3>Project 5: Web Applications for Clients</h3>
-      <p>Delivered custom web apps for multiple clients including dashboards, internal tools, and portal-based solutions optimized for business processes.</p>
-    </div>
-  </section>
-  
-  
-  <section id="contact" class="contact">
-    <h2>📞 Contact Me</h2>
-    <p>If you are looking for an IT consultant or system administration expert, feel free to reach out. I'm open to collaborating on projects in any stack.</p>
-  </section>
+                <div class="glass-panel rounded-xl overflow-hidden shadow-2xl border border-slate-700 font-mono text-sm relative transform hover:scale-[1.02] transition duration-500">
+                    <div class="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-auto text-xs text-slate-500 opacity-50">root@kailash:~/profile</span>
+                    </div>
+                    <div class="p-6 text-emerald-400 min-h-[300px] bg-[#0f172a] leading-relaxed">
+                        <div class="mb-3">
+                            <span class="text-blue-400">root@kailash:~#</span> <span class="text-white">cat current_status.json</span>
+                        </div>
+                        <div class="text-yellow-100 pl-4 mb-4 opacity-90">
+                            {<br>
+                            &nbsp;&nbsp;"role": "Senior System Officer",<br>
+                            &nbsp;&nbsp;"focus": ["Cloud Migration", "Automation"],<br>
+                            &nbsp;&nbsp;"location": "Kathmandu, Nepal",<br>
+                            &nbsp;&nbsp;"status": "Open to Remote Work"<br>
+                            }
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-blue-400">root@kailash:~#</span> <span class="text-white">./deploy_skills.sh</span>
+                        </div>
+                        <div class="text-slate-400 pl-4">
+                            > Loading Docker... [OK]<br>
+                            > Loading Terraform... [OK]<br>
+                            > Loading Kubernetes... [OK]<br>
+                        </div>
+                        <div class="mt-4">
+                             <span class="text-blue-400">root@kailash:~#</span> <span class="text-white cursor-blink">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Kailash Khanal | Ready for Freelance & Remote Roles</p>
-  </footer>
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Core Competencies</h2>
+            <p class="text-slate-400">Delivering end-to-end IT solutions.</p>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-6 text-xl">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">System Administration</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Expert management of Linux/Windows servers, Virtualization (VMware/Proxmox), and Network Security including Sophos Firewalls and VLANs.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 mb-6 text-xl">
+                    <i class="fa-brands fa-wordpress"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Designing custom WordPress sites and robust E-commerce platforms (WooCommerce) with optimized server environments for performance.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-6 text-xl">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cloud & DevOps</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Researching and implementing Cloud technologies, creating CI/CD pipelines, and automating daily operations using Python scripting.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto bg-slate-900/30">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Professional Timeline</h2>
+            <p class="text-slate-400">A progressive career in IT Infrastructure and Management.</p>
+        </div>
+        
+        <div class="relative pl-6 md:pl-0">
+            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-800 -ml-[0.5px]"></div>
+
+            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
+                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-primary rounded-full border-4 border-slate-950 box-content group-hover:bg-white transition"></div>
+                <div class="glass-panel p-6 rounded-xl border border-primary/30 relative hover:border-primary/60 transition">
+                    <span class="text-xs font-mono text-primary mb-2 block tracking-widest uppercase">May 2025 – Present</span>
+                    <h3 class="text-xl font-bold text-white">Sr. Officer – System & Projection</h3>
+                    <div class="text-slate-400 text-sm mb-4 font-semibold">Team Quest – QFX Cinemas Head Office</div>
+                    <ul class="text-slate-400 text-sm space-y-2 list-none">
+                        <li>Lead infrastructure planning, advanced system administration, and team mentorship.</li>
+                        <li>Design secure IT environments including SAN/NAS, failover clustering, and VPNs.</li>
+                        <li>Oversee firewall policies (Sophos UTM/XG) and optimize bandwidth across all branches.</li>
+                        <li>Conduct disaster recovery planning, audits, and performance tuning.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative md:w-1/2 md:ml-auto md:pl-12 mb-12 group">
+                <div class="hidden md:block absolute left-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
+                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
+                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">May 2023 – Apr 2025</span>
+                    <h3 class="text-xl font-bold text-white">IT Officer</h3>
+                    <div class="text-slate-400 text-sm mb-4 font-semibold">QFX Cinemas</div>
+                    <ul class="text-slate-400 text-sm space-y-2 list-none">
+                        <li>Configured Windows/Linux servers, NGINX, Apache, and Firewalls.</li>
+                        <li>Automated workflows using Python and Power Automate to streamline operations.</li>
+                        <li>Managed Virtualization (VMware, Proxmox, Hyper-V) and Active Directory.</li>
+                        <li>Implemented monitoring tools (Zabbix, Checkmk) and enhanced network security (VLANs).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
+                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
+                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
+                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">Oct 2022 – Mar 2023</span>
+                    <h3 class="text-xl font-bold text-white">WordPress Developer</h3>
+                    <div class="text-slate-400 text-sm mb-4 font-semibold">The Web Art</div>
+                    <ul class="text-slate-400 text-sm space-y-2 list-none">
+                        <li>Designed custom WordPress sites and developed WooCommerce integrations.</li>
+                        <li>Managed server setups, migrations, and performance optimization.</li>
+                        <li>Provided technical support and resolved stability issues for clients.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative md:w-1/2 md:ml-auto md:pl-12 mb-12 group">
+                <div class="hidden md:block absolute left-[-6px] top-6 w-3 h-3 bg-emerald-500 rounded-full border-4 border-slate-950 box-content group-hover:bg-white transition"></div>
+                <div class="glass-panel p-6 rounded-xl relative border-l-2 border-emerald-500 md:border-l-0 md:border-r-2 hover:bg-emerald-900/10 transition">
+                    <span class="text-xs font-mono text-emerald-400 mb-2 block tracking-widest uppercase">Feb 2020 – Jun 2022</span>
+                    <h3 class="text-xl font-bold text-white">IT Support</h3>
+                    <div class="text-slate-400 text-sm mb-4 font-semibold">CSE Multi Trade Center</div>
+                    <ul class="text-slate-400 text-sm space-y-2 list-none">
+                        <li>Designed and managed Active Directory (AD) infrastructure on Windows Server.</li>
+                        <li>Resolved hardware, software, and network connectivity issues for diverse clients.</li>
+                        <li>Managed CCTV systems and created documentation for technical procedures.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
+                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
+                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
+                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">Jan 2020 – Jun 2022</span>
+                    <h3 class="text-xl font-bold text-white">Computer Trainer</h3>
+                    <div class="text-slate-400 text-sm mb-4 font-semibold">Ns College of Software & Hardware</div>
+                    <ul class="text-slate-400 text-sm space-y-2 list-none">
+                        <li>Managed training events with CTEVT and developed comprehensive course content.</li>
+                        <li>Delivered training from fundamentals to advanced skills for engineering students.</li>
+                        <li>Provided lab support and evaluated program outcomes for continuous improvement.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12">Featured Projects</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400"><i class="fa-solid fa-film text-xl"></i></div>
+                    <span class="text-[10px] font-mono font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">AUTOMATION</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">TMS Implementation</h3>
+                <p class="text-slate-400 text-sm mb-6">Implemented a centralized Theater Management System (TMS) to automate scheduling and manage digital projection systems, reducing manual errors.</p>
+                <div class="flex gap-2 text-[10px] text-slate-500 font-mono uppercase">
+                    <span>#Networking</span> <span>#IoT</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-orange-500/10 rounded-lg text-orange-400"><i class="fa-solid fa-robot text-xl"></i></div>
+                    <span class="text-[10px] font-mono font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">PYTHON</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Workflow Automation Bot</h3>
+                <p class="text-slate-400 text-sm mb-6">Developed scripts using Python and Power Automate to streamline manual reporting processes across multiple departments.</p>
+                <div class="flex gap-2 text-[10px] text-slate-500 font-mono uppercase">
+                    <span>#Python</span> <span>#API</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400"><i class="fa-solid fa-cart-shopping text-xl"></i></div>
+                    <span class="text-[10px] font-mono font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">WEB</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">E-Commerce Infrastructure</h3>
+                <p class="text-slate-400 text-sm mb-6">Built custom WooCommerce solutions with secure server setups, optimized databases, and robust payment gateway integrations.</p>
+                <div class="flex gap-2 text-[10px] text-slate-500 font-mono uppercase">
+                    <span>#WordPress</span> <span>#Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="pt-24 pb-10 px-6 border-t border-slate-800 text-center bg-slate-950">
+        <h2 class="text-4xl font-bold mb-6 text-white">Let's Secure Your Infrastructure</h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-10">Available for freelance projects, Cloud Migration, and System Audits.</p>
+        
+        <div class="flex justify-center gap-6 mb-16">
+            <a href="mailto:your.email@example.com" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-slate-200 transition shadow-lg shadow-white/10">
+                <i class="fa-regular fa-envelope mr-2"></i> Send Email
+            </a>
+            <a href="#" class="glass-panel px-8 py-3 rounded-full font-bold hover:bg-white/10 transition border border-slate-700">
+                <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+            </a>
+        </div>
+
+        <div class="text-slate-600 text-sm flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto pt-8 border-t border-slate-900/50">
+            <p>&copy; 2026 Kailash Khanal. All Rights Reserved.</p>
+            <p class="mt-2 md:mt-0 flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary"></i> Kathmandu, Nepal</p>
+        </div>
+    </footer>
 </body>
 </html>
