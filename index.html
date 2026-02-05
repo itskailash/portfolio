@@ -197,7 +197,132 @@
             </div>
         </div>
     </section>
+<style>
+    /* Section Heading - Centered */
+    .section-title-centered {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .section-title-centered h2 {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+    }
 
+    .title-underline {
+        height: 4px;
+        width: 60px;
+        background: #38bdf8;
+        border-radius: 9999px;
+        margin: 0 auto;
+    }
+
+    /* Glass Container Styling */
+    .arsenal-container {
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 1.5rem;
+        padding: 2.25rem;
+        transition: all 0.4s ease;
+        height: 100%;
+    }
+
+    .arsenal-container:hover {
+        border-color: rgba(56, 189, 248, 0.3);
+        background: rgba(15, 23, 42, 0.6);
+        transform: translateY(-5px);
+    }
+
+    /* Tool Badge Styling */
+    .tool-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.6rem 0.9rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 0.6rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #94a3b8;
+        transition: all 0.3s ease;
+    }
+
+    .tool-badge:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+    }
+</style>
+
+<section id="arsenal" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="section-title-centered">
+        <h2>Technical Arsenal</h2>
+        <div class="title-underline"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+        
+        <div class="arsenal-container group">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-2.5 bg-sky-500/10 rounded-xl">
+                    <i class="fa-solid fa-cloud text-sky-400 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white tracking-tight">Cloud & Virtualization</h3>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <div class="tool-badge group/item"><i class="fa-brands fa-aws group-hover/item:text-[#FF9900]"></i> AWS</div>
+                <div class="tool-badge group/item"><i class="fa-brands fa-microsoft group-hover/item:text-[#0078D4]"></i> Azure</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-server"></i> VMware</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-box-open group-hover/item:text-[#2496ED]"></i> Proxmox</div>
+                <div class="tool-badge group/item"><i class="fa-brands fa-windows group-hover/item:text-[#00a4ef]"></i> Hyper-V</div>
+                <div class="tool-badge group/item"><i class="fa-brands fa-docker group-hover/item:text-[#2496ED]"></i> Docker</div>
+            </div>
+        </div>
+
+        <div class="arsenal-container group">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-2.5 bg-emerald-500/10 rounded-xl">
+                    <i class="fa-solid fa-shield-halved text-emerald-400 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white tracking-tight">Network & Security</h3>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <div class="tool-badge group/item"><i class="fa-solid fa-firewall group-hover/item:text-[#10b981]"></i> Sophos FW</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-network-wired group-hover/item:text-[#10b981]"></i> VPNs</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-diagram-project group-hover/item:text-[#10b981]"></i> VLANs</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-user-secret group-hover/item:text-red-500"></i> CEH</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-briefcase-medical group-hover/item:text-emerald-400"></i> DR Planning</div>
+            </div>
+        </div>
+
+        <div class="arsenal-container group">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-2.5 bg-indigo-500/10 rounded-xl">
+                    <i class="fa-solid fa-microchip text-indigo-400 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white tracking-tight">DevOps & Monitoring</h3>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <div class="tool-badge group/item"><i class="fa-brands fa-python group-hover/item:text-[#FACC15]"></i> Python</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-terminal group-hover/item:text-white"></i> Bash</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-eye group-hover/item:text-[#f43f5e]"></i> Zabbix</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-chart-line group-hover/item:text-[#818cf8]"></i> Checkmk</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-gauge-high group-hover/item:text-[#F28E2C]"></i> Grafana</div>
+                <div class="tool-badge group/item"><i class="fa-solid fa-infinity group-hover/item:text-[#38bdf8]"></i> CI/CD</div>
+            </div>
+        </div>
+
+    </div>
+</section>
     <section id="experience" class="py-24 px-6 max-w-5xl mx-auto bg-slate-900/30">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold mb-4">Professional Timeline</h2>
