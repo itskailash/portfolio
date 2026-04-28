@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -29,15 +30,45 @@
             }
         }
     </script>
+    
     <style>
         body { background-color: #020617; color: #f1f5f9; }
         .glass-panel { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .nav-glass { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .service-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        
         /* Terminal Cursor */
         .cursor-blink { animation: blink 1s step-end infinite; }
         @keyframes blink { 50% { opacity: 0; } }
+
+        /* Section Headings */
+        .section-title-centered { text-align: center; margin-bottom: 4rem; }
+        .section-title-centered h2 { font-size: 2.25rem; font-weight: 800; color: #fff; letter-spacing: -0.025em; margin-bottom: 0.75rem; text-transform: uppercase; }
+        .title-underline { height: 4px; width: 60px; background: #38bdf8; border-radius: 9999px; margin: 0 auto; }
+
+        /* Arsenal/Tools */
+        .arsenal-container { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 1.5rem; padding: 2.25rem; transition: all 0.4s ease; height: 100%; }
+        .arsenal-container:hover { border-color: rgba(56, 189, 248, 0.3); background: rgba(15, 23, 42, 0.6); transform: translateY(-5px); }
+        .tool-badge { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.9rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 0.6rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; color: #94a3b8; transition: all 0.3s ease; }
+        .tool-badge:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+
+        /* Experience Timeline "Wow" Animations */
+        .timeline-item { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease forwards; }
+        .timeline-item:nth-child(2) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        .timeline-dot { box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); transition: all 0.3s ease; }
+        .timeline-item:hover .timeline-dot { background: #38bdf8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.9); transform: scale(1.3); }
+        
+        .timeline-card { transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease; }
+        .timeline-item:hover .timeline-card { transform: translateX(12px); border-color: rgba(56, 189, 248, 0.8); background: rgba(30, 41, 59, 0.8); }
     </style>
 </head>
 <body class="selection:bg-primary selection:text-slate-950">
@@ -47,7 +78,6 @@
             <a href="#" class="text-xl font-bold tracking-tight hover:text-primary transition group">
                 KAILASH<span class="text-primary group-hover:text-white transition">.KHANAL</span>
             </a>
-            
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <a href="#about" class="hover:text-white transition">About</a>
                 <a href="#services" class="hover:text-white transition">Services</a>
@@ -55,7 +85,6 @@
                 <a href="#projects" class="hover:text-white transition">Projects</a>
                 <a href="#contact" class="text-primary border border-primary/20 px-5 py-2 rounded-full hover:bg-primary hover:text-slate-900 transition font-bold">Hire Me</a>
             </div>
-            
             <button class="md:hidden text-2xl text-slate-300"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
@@ -79,7 +108,7 @@
             </h1>
 
             <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-                I am a <strong>Infra</strong> and <strong>Cloud Engineer</strong>.
+                I am an <strong>Infra</strong> and <strong>Cloud Engineer</strong>.
                 I specialize in modernizing infrastructure, automating workflows (DevOps), and building robust web solutions for businesses.
             </p>
 
@@ -105,16 +134,14 @@
     <section id="about" class="py-24 px-6 bg-slate-900/30">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
                 <div>
                     <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
                     <p class="text-slate-400 mb-6 leading-relaxed text-lg">
                         I am a passionate <strong>System Administrator</strong> and <strong>DevOps enthusiast</strong> with hands-on expertise in Linux, Windows servers, Docker, VMware, and Firewalls.
                     </p>
                     <p class="text-slate-400 mb-8 leading-relaxed">
-                        Currently, I manage enterprise infrastructure at <strong>QFX Cinemas</strong> while actively researching emerging cloud technologies. I also freelance, helping businesses build their digital presence through custom websites and e-commerce platforms.
+                        Currently, I manage enterprise infrastructure at <strong>Digital Network Solution</strong> while actively researching emerging cloud technologies. I also freelance, helping businesses build their digital presence through custom websites and e-commerce platforms.
                     </p>
-                    
                     <div class="flex flex-wrap gap-3">
                         <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-shield-halved mr-2"></i>System Hardening</span>
                         <span class="px-4 py-2 glass-panel rounded-full text-xs font-mono text-primary border-primary/30"><i class="fa-solid fa-server mr-2"></i>Disaster Recovery</span>
@@ -136,7 +163,7 @@
                         </div>
                         <div class="text-yellow-100 pl-4 mb-4 opacity-90">
                             {<br>
-                            &nbsp;&nbsp;"role": "Senior System Officer",<br>
+                            &nbsp;&nbsp;"role": "Infrastructure & Cloud Engineer",<br>
                             &nbsp;&nbsp;"focus": ["Cloud Migration", "Automation"],<br>
                             &nbsp;&nbsp;"location": "Kathmandu, Nepal",<br>
                             &nbsp;&nbsp;"status": "Open to Remote Work"<br>
@@ -158,138 +185,68 @@
             </div>
         </div>
     </section>
-<style>
-    /* Section Heading - Centered */
-    .section-title-centered {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-    
-    .section-title-centered h2 {
-        font-size: 2.25rem;
-        font-weight: 800;
-        color: #fff;
-        letter-spacing: -0.025em;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-    }
 
-    .title-underline {
-        height: 4px;
-        width: 60px;
-        background: #38bdf8;
-        border-radius: 9999px;
-        margin: 0 auto;
-    }
-
-    /* Glass Container Styling */
-    .arsenal-container {
-        background: rgba(15, 23, 42, 0.4);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 1.5rem;
-        padding: 2.25rem;
-        transition: all 0.4s ease;
-        height: 100%;
-    }
-
-    .arsenal-container:hover {
-        border-color: rgba(56, 189, 248, 0.3);
-        background: rgba(15, 23, 42, 0.6);
-        transform: translateY(-5px);
-    }
-
-    /* Tool Badge Styling */
-    .tool-badge {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0.6rem 0.9rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 0.6rem;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: #94a3b8;
-        transition: all 0.3s ease;
-    }
-
-    .tool-badge:hover {
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
-    }
-</style>
-
-<section id="arsenal" class="py-24 px-6 max-w-7xl mx-auto">
-    <div class="section-title-centered">
-        <h2>Technical Arsenal</h2>
-        <div class="title-underline"></div>
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-6">
-        
-        <div class="arsenal-container group">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-2.5 bg-sky-500/10 rounded-xl">
-                    <i class="fa-solid fa-cloud text-sky-400 text-xl"></i>
+    <section id="arsenal" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="section-title-centered">
+            <h2>Technical Arsenal</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="arsenal-container group">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-2.5 bg-sky-500/10 rounded-xl">
+                        <i class="fa-solid fa-cloud text-sky-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-tight">Cloud & Virtualization</h3>
                 </div>
-                <h3 class="text-lg font-bold text-white tracking-tight">Cloud & Virtualization</h3>
+                <div class="flex flex-wrap gap-2">
+                    <div class="tool-badge group/item"><i class="fa-brands fa-aws group-hover/item:text-[#FF9900]"></i> AWS</div>
+                    <div class="tool-badge group/item"><i class="fa-brands fa-microsoft group-hover/item:text-[#0078D4]"></i> Azure</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-server"></i> VMware</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-box-open group-hover/item:text-[#2496ED]"></i> Proxmox</div>
+                    <div class="tool-badge group/item"><i class="fa-brands fa-windows group-hover/item:text-[#00a4ef]"></i> Hyper-V</div>
+                    <div class="tool-badge group/item"><i class="fa-brands fa-docker group-hover/item:text-[#2496ED]"></i> Docker</div>
+                </div>
             </div>
-            
-            <div class="flex flex-wrap gap-2">
-                <div class="tool-badge group/item"><i class="fa-brands fa-aws group-hover/item:text-[#FF9900]"></i> AWS</div>
-                <div class="tool-badge group/item"><i class="fa-brands fa-microsoft group-hover/item:text-[#0078D4]"></i> Azure</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-server"></i> VMware</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-box-open group-hover/item:text-[#2496ED]"></i> Proxmox</div>
-                <div class="tool-badge group/item"><i class="fa-brands fa-windows group-hover/item:text-[#00a4ef]"></i> Hyper-V</div>
-                <div class="tool-badge group/item"><i class="fa-brands fa-docker group-hover/item:text-[#2496ED]"></i> Docker</div>
+            <div class="arsenal-container group">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-2.5 bg-emerald-500/10 rounded-xl">
+                        <i class="fa-solid fa-shield-halved text-emerald-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-tight">Network & Security</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <div class="tool-badge group/item"><i class="fa-solid fa-firewall group-hover/item:text-[#10b981]"></i> Sophos FW</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-network-wired group-hover/item:text-[#10b981]"></i> VPNs</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-diagram-project group-hover/item:text-[#10b981]"></i> VLANs</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-user-secret group-hover/item:text-red-500"></i> CEH</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-briefcase-medical group-hover/item:text-emerald-400"></i> DR Planning</div>
+                </div>
+            </div>
+            <div class="arsenal-container group">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-2.5 bg-indigo-500/10 rounded-xl">
+                        <i class="fa-solid fa-microchip text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-tight">DevOps & Monitoring</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <div class="tool-badge group/item"><i class="fa-brands fa-python group-hover/item:text-[#FACC15]"></i> Python</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-terminal group-hover/item:text-white"></i> Bash</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-eye group-hover/item:text-[#f43f5e]"></i> Zabbix</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-chart-line group-hover/item:text-[#818cf8]"></i> Checkmk</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-gauge-high group-hover/item:text-[#F28E2C]"></i> Grafana</div>
+                    <div class="tool-badge group/item"><i class="fa-solid fa-infinity group-hover/item:text-[#38bdf8]"></i> CI/CD</div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="arsenal-container group">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-2.5 bg-emerald-500/10 rounded-xl">
-                    <i class="fa-solid fa-shield-halved text-emerald-400 text-xl"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white tracking-tight">Network & Security</h3>
-            </div>
-            
-            <div class="flex flex-wrap gap-2">
-                <div class="tool-badge group/item"><i class="fa-solid fa-firewall group-hover/item:text-[#10b981]"></i> Sophos FW</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-network-wired group-hover/item:text-[#10b981]"></i> VPNs</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-diagram-project group-hover/item:text-[#10b981]"></i> VLANs</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-user-secret group-hover/item:text-red-500"></i> CEH</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-briefcase-medical group-hover/item:text-emerald-400"></i> DR Planning</div>
-            </div>
-        </div>
-
-        <div class="arsenal-container group">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-2.5 bg-indigo-500/10 rounded-xl">
-                    <i class="fa-solid fa-microchip text-indigo-400 text-xl"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white tracking-tight">DevOps & Monitoring</h3>
-            </div>
-            
-            <div class="flex flex-wrap gap-2">
-                <div class="tool-badge group/item"><i class="fa-brands fa-python group-hover/item:text-[#FACC15]"></i> Python</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-terminal group-hover/item:text-white"></i> Bash</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-eye group-hover/item:text-[#f43f5e]"></i> Zabbix</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-chart-line group-hover/item:text-[#818cf8]"></i> Checkmk</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-gauge-high group-hover/item:text-[#F28E2C]"></i> Grafana</div>
-                <div class="tool-badge group/item"><i class="fa-solid fa-infinity group-hover/item:text-[#38bdf8]"></i> CI/CD</div>
-            </div>
-        </div>
-
-    </div>
-</section>
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold mb-4">Core Competencies</h2>
             <p class="text-slate-400">Delivering end-to-end IT solutions.</p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-6">
             <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
                 <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-6 text-xl">
@@ -300,7 +257,6 @@
                     Expert management of Linux/Windows servers, Virtualization (VMware/Proxmox), and Network Security including Sophos Firewalls and VLANs.
                 </p>
             </div>
-
             <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
                 <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 mb-6 text-xl">
                     <i class="fa-brands fa-wordpress"></i>
@@ -310,7 +266,6 @@
                     Designing custom WordPress sites and robust E-commerce platforms (WooCommerce) with optimized server environments for performance.
                 </p>
             </div>
-
             <div class="glass-panel p-8 rounded-xl service-card transition duration-300">
                 <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-6 text-xl">
                     <i class="fa-solid fa-cloud"></i>
@@ -322,84 +277,69 @@
             </div>
         </div>
     </section>
-    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto bg-slate-900/30">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">Professional Timeline</h2>
-            <p class="text-slate-400">A progressive career in IT Infrastructure and Management.</p>
+
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto bg-slate-900/30 rounded-3xl">
+        <div class="section-title-centered mb-16">
+            <h2>Professional Experience</h2>
+            <div class="title-underline mb-6"></div>
+            <p class="text-slate-400">A progressive career in Cloud Infrastructure and Management.</p>
         </div>
         
-        <div class="relative pl-6 md:pl-0">
-            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-800 -ml-[0.5px]"></div>
-
-            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
-                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-primary rounded-full border-4 border-slate-950 box-content group-hover:bg-white transition"></div>
-                <div class="glass-panel p-6 rounded-xl border border-primary/30 relative hover:border-primary/60 transition">
-                    <span class="text-xs font-mono text-primary mb-2 block tracking-widest uppercase">May 2025 – Present</span>
-                    <h3 class="text-xl font-bold text-white">Sr. Officer – System & Projection</h3>
-                    <div class="text-slate-400 text-sm mb-4 font-semibold">Team Quest – QFX Cinemas Head Office</div>
-                    <ul class="text-slate-400 text-sm space-y-2 list-none">
-                        <li>Lead infrastructure planning, advanced system administration, and team mentorship.</li>
-                        <li>Design secure IT environments including SAN/NAS, failover clustering, and VPNs.</li>
-                        <li>Oversee firewall policies (Sophos UTM/XG) and optimize bandwidth across all branches.</li>
-                        <li>Conduct disaster recovery planning, audits, and performance tuning.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="relative md:w-1/2 md:ml-auto md:pl-12 mb-12 group">
-                <div class="hidden md:block absolute left-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
-                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
-                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">May 2023 – Apr 2025</span>
-                    <h3 class="text-xl font-bold text-white">IT Officer</h3>
-                    <div class="text-slate-400 text-sm mb-4 font-semibold">QFX Cinemas</div>
-                    <ul class="text-slate-400 text-sm space-y-2 list-none">
-                        <li>Configured Windows/Linux servers, NGINX, Apache, and Firewalls.</li>
-                        <li>Automated workflows using Python and Power Automate to streamline operations.</li>
-                        <li>Managed Virtualization (VMware, Proxmox, Hyper-V) and Active Directory.</li>
-                        <li>Implemented monitoring tools (Zabbix, Checkmk) and enhanced network security (VLANs).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
-                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
-                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
-                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">Oct 2022 – Mar 2023</span>
-                    <h3 class="text-xl font-bold text-white">WordPress Developer</h3>
-                    <div class="text-slate-400 text-sm mb-4 font-semibold">The Web Art</div>
-                    <ul class="text-slate-400 text-sm space-y-2 list-none">
-                        <li>Designed custom WordPress sites and developed WooCommerce integrations.</li>
-                        <li>Managed server setups, migrations, and performance optimization.</li>
-                        <li>Provided technical support and resolved stability issues for clients.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="relative md:w-1/2 md:ml-auto md:pl-12 mb-12 group">
-                <div class="hidden md:block absolute left-[-6px] top-6 w-3 h-3 bg-emerald-500 rounded-full border-4 border-slate-950 box-content group-hover:bg-white transition"></div>
-                <div class="glass-panel p-6 rounded-xl relative border-l-2 border-emerald-500 md:border-l-0 md:border-r-2 hover:bg-emerald-900/10 transition">
-                    <span class="text-xs font-mono text-emerald-400 mb-2 block tracking-widest uppercase">Feb 2020 – Jun 2022</span>
-                    <h3 class="text-xl font-bold text-white">IT Support</h3>
-                    <div class="text-slate-400 text-sm mb-4 font-semibold">CSE Multi Trade Center</div>
-                    <ul class="text-slate-400 text-sm space-y-2 list-none">
-                        <li>Designed and managed Active Directory (AD) infrastructure on Windows Server.</li>
-                        <li>Resolved hardware, software, and network connectivity issues for diverse clients.</li>
-                        <li>Managed CCTV systems and created documentation for technical procedures.</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="relative pl-6 md:pl-10 max-w-2xl mx-auto">
             
-            <div class="relative md:w-1/2 md:mr-auto md:pr-12 md:text-right mb-12 group">
-                <div class="hidden md:block absolute right-[-6px] top-6 w-3 h-3 bg-slate-600 rounded-full border-4 border-slate-950 box-content group-hover:bg-primary transition"></div>
-                <div class="glass-panel p-6 rounded-xl relative hover:border-slate-500 transition">
-                    <span class="text-xs font-mono text-slate-400 mb-2 block tracking-widest uppercase">Jan 2020 – Jun 2022</span>
-                    <h3 class="text-xl font-bold text-white">Computer Trainer</h3>
-                    <div class="text-slate-400 text-sm mb-4 font-semibold">Ns College of Software & Hardware</div>
-                    <ul class="text-slate-400 text-sm space-y-2 list-none">
-                        <li>Managed training events with CTEVT and developed comprehensive course content.</li>
-                        <li>Delivered training from fundamentals to advanced skills for engineering students.</li>
-                        <li>Provided lab support and evaluated program outcomes for continuous improvement.</li>
-                    </ul>
+            <div class="absolute left-0 top-2 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-transparent rounded-full shadow-[0_0_10px_rgba(56,189,248,0.3)]"></div>
+
+            <div class="timeline-item relative mb-12 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-primary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-primary group-hover:bg-slate-800/50">
+                    <span class="text-primary font-mono text-xs font-bold tracking-widest uppercase mb-2 block">Feb 2026 – Present</span>
+                    <h3 class="text-2xl font-bold text-white mb-1">Infrastructure & Cloud Engineer</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">Digital Network Solution</p>
+                </div>
+            </div>
+
+            <div class="timeline-item relative mb-12 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-primary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-primary group-hover:bg-slate-800/50">
+                    <span class="text-primary font-mono text-xs font-bold tracking-widest uppercase mb-2 block">May 2025 – Feb 2026</span>
+                    <h3 class="text-2xl font-bold text-white mb-1">Sr. System Administrator</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">Team Quest – QFX Cinemas Head Office</p>
+                </div>
+            </div>
+
+            <div class="timeline-item relative mb-12 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-secondary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-secondary group-hover:bg-slate-800/50">
+                    <span class="text-secondary font-mono text-xs font-bold tracking-widest uppercase mb-2 block">May 2023 – Apr 2025</span>
+                    <h3 class="text-2xl font-bold text-white mb-1">System Administrator</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">Team Quest – QFX Cinemas Head Office</p>
+                </div>
+            </div>
+
+            <div class="timeline-item relative mb-12 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-slate-600 group-hover:border-primary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-transparent group-hover:border-l-primary group-hover:bg-slate-800/50">
+                    <span class="text-slate-400 group-hover:text-primary transition-colors font-mono text-xs font-bold tracking-widest uppercase mb-2 block">Oct 2022 – Mar 2023</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-1">WordPress Developer</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">The Web Art</p>
+                </div>
+            </div>
+
+            <div class="timeline-item relative mb-12 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-slate-600 group-hover:border-primary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-transparent group-hover:border-l-primary group-hover:bg-slate-800/50">
+                    <span class="text-slate-400 group-hover:text-primary transition-colors font-mono text-xs font-bold tracking-widest uppercase mb-2 block">Feb 2020 – Jun 2022</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-1">System Administrator</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">CSE Multi Trade Center</p>
+                </div>
+            </div>
+
+            <div class="timeline-item relative mb-4 pl-6 md:pl-10 group cursor-default">
+                <div class="timeline-dot absolute left-[-10px] top-6 w-6 h-6 rounded-full border-[5px] border-slate-600 group-hover:border-primary bg-slate-950 z-10"></div>
+                <div class="timeline-card glass-panel p-6 md:p-8 rounded-xl border-l-4 border-l-transparent group-hover:border-l-primary group-hover:bg-slate-800/50">
+                    <span class="text-slate-400 group-hover:text-primary transition-colors font-mono text-xs font-bold tracking-widest uppercase mb-2 block">Jan 2020 – Jun 2022</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Computer Trainer (PT)</h3>
+                    <p class="text-slate-400 font-medium tracking-wide">NS College of Software & Hardware Engineering</p>
                 </div>
             </div>
 
@@ -408,7 +348,6 @@
 
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold mb-12">Featured Projects</h2>
-
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div class="flex justify-between items-start mb-6">
@@ -421,7 +360,6 @@
                     <span>#Networking</span> <span>#IoT</span>
                 </div>
             </div>
-
             <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div class="flex justify-between items-start mb-6">
                     <div class="p-3 bg-orange-500/10 rounded-lg text-orange-400"><i class="fa-solid fa-robot text-xl"></i></div>
@@ -433,7 +371,6 @@
                     <span>#Python</span> <span>#API</span>
                 </div>
             </div>
-
             <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div class="flex justify-between items-start mb-6">
                     <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400"><i class="fa-solid fa-cart-shopping text-xl"></i></div>
@@ -451,20 +388,19 @@
     <footer id="contact" class="pt-24 pb-10 px-6 border-t border-slate-800 text-center bg-slate-950">
         <h2 class="text-4xl font-bold mb-6 text-white">Let's Secure Your Infrastructure</h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-10">Available for freelance projects, Cloud Migration, and System Audits.</p>
-        
         <div class="flex justify-center gap-6 mb-16">
-            <a href="mailto:itskailasx@gmail.com" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-slate-200 transition shadow-lg shadow-white/10">
+            <a href="/cdn-cgi/l/email-protection#751c01061e141c1914060d351218141c195b161a18" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-slate-200 transition shadow-lg shadow-white/10">
                 <i class="fa-regular fa-envelope mr-2"></i> Send Email
             </a>
             <a href="https://www.linkedin.com/in/kailashkhanal/" class="glass-panel px-8 py-3 rounded-full font-bold hover:bg-white/10 transition border border-slate-700">
                 <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
             </a>
         </div>
-
         <div class="text-slate-600 text-sm flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto pt-8 border-t border-slate-900/50">
             <p>&copy; 2026 Kailash Khanal. All Rights Reserved.</p>
             <p class="mt-2 md:mt-0 flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary"></i> Kathmandu, Nepal</p>
         </div>
     </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
